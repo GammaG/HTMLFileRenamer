@@ -1,6 +1,7 @@
 package de.init.filereader;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,13 +13,13 @@ public class FileReader {
 	private volatile InputStreamReader isr;
 	private volatile BufferedReader br;
 
-	public String readFile(String path) throws IOException {
+	public String readFile(File file) throws IOException {
 
 		StringBuffer stringBuffer = new StringBuffer();
 
 		try {
 			// open input stream test.txt for reading purpose.
-			is = new FileInputStream(path);
+			is = new FileInputStream(file);
 
 			// create new input stream reader
 			isr = new InputStreamReader(is);
