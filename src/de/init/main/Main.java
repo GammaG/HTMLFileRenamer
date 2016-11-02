@@ -55,7 +55,7 @@ public class Main {
 			}
 			for (int i = 0; i < logoList.size(); i++) {
 				if (i == 0) {
-					File file = new File(logoList.get(i).getPath());
+					File file = new File(logoList.get(i).getParent() + File.separator + "design.png");
 					logoList.get(i).renameTo(file);
 					continue;
 				}
